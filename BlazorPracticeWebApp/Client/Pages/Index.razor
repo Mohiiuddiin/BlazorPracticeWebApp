@@ -1,0 +1,21 @@
+﻿@page "/"
+
+<h1>Hello, @customToUpper(name)!</h1>
+
+Welcome to your new app.
+
+@*<SurveyPrompt Title="How is Blazor working for you?" />*@
+<button @onclick="@WriteInLog">Click Me...</button>
+
+@code{
+
+    string name = "Mohiuddin";
+
+    string customToUpper(string value) => value.ToUpper();
+
+    void WriteInLog()
+    {
+        Console.WriteLine("Hello Worldrom method");
+    }
+
+}
