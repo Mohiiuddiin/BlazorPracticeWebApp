@@ -1,21 +1,53 @@
 ﻿@page "/"
 
-<h1>Hello, @customToUpper(name)!</h1>
+<h1>Hello, @StringUtilities.CustomToUpper(name)!</h1>
 
 Welcome to your new app.
 
+<h3>Movie</h3>
+
+<MovieList Movies="movies"/>
+
+
+
 @*<SurveyPrompt Title="How is Blazor working for you?" />*@
-<button @onclick="@WriteInLog">Click Me...</button>
+@*<button @onclick="@WriteInLog">Click Me...</button>*@
 
 @code{
 
+    private List<Movie> movies;
+    
+
+    protected async override Task OnInitializedAsync()
+    {
+        await Task.Delay(3000);
+
+        movies = new List<Movie>()
+        {
+            new Movie{Title = "<b>Spider-Man:No way home</b>",ReleaseDate=new DateTime(2021,09,24)},
+            new Movie{Title = "Doctor Strange 2",ReleaseDate=new DateTime(2022,09,24)}
+
+        };
+    }
+
+
+
+    /// <summary>
+    /// 
+    /// </summary>
     string name = "Mohiuddin";
 
-    string customToUpper(string value) => value.ToUpper();
+    Movie movie1 = new Movie()
+    {
+        Title = "Spoder-Man:No way home",
+        ReleaseDate = new DateTime(2021, 9, 24)
+    };
+
+
 
     void WriteInLog()
     {
-        Console.WriteLine("Hello Worldrom method");
+        Console.WriteLine("Hello World from method");
     }
 
 }

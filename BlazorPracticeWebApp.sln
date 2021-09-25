@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorPracticeWebApp.Server", "BlazorPracticeWebApp\Server\BlazorPracticeWebApp.Server.csproj", "{FBFC730A-D89E-4D04-8B18-8EF28DE2C7E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorPracticeWebApp.Server", "BlazorPracticeWebApp\Server\BlazorPracticeWebApp.Server.csproj", "{FBFC730A-D89E-4D04-8B18-8EF28DE2C7E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorPracticeWebApp.Client", "BlazorPracticeWebApp\Client\BlazorPracticeWebApp.Client.csproj", "{EDBE5668-BE20-47F0-A839-AEB7127DED94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorPracticeWebApp.Client", "BlazorPracticeWebApp\Client\BlazorPracticeWebApp.Client.csproj", "{EDBE5668-BE20-47F0-A839-AEB7127DED94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorPracticeWebApp.Shared", "BlazorPracticeWebApp\Shared\BlazorPracticeWebApp.Shared.csproj", "{16030BEA-4CB8-42F5-90A9-313B4577D0C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorPracticeWebApp.Shared", "BlazorPracticeWebApp\Shared\BlazorPracticeWebApp.Shared.csproj", "{16030BEA-4CB8-42F5-90A9-313B4577D0C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

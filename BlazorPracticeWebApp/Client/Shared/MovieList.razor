@@ -1,0 +1,36 @@
+﻿@if (Movies == null)
+{
+    <img src="https://img.pikbest.com/58pic/35/39/61/62K58PICb88i68HEwVnm5_PIC2018.gif!w340" />
+}
+else if (Movies.Count == 0)
+{
+    <text>No Movies Found</text>
+}
+else
+{
+    <input type="checkbox" @onchange="@(()=>displayBtn = !displayBtn)"/>
+    @foreach (var movie in Movies)
+    {
+
+        <IndividualMovie Movie="movie" DisplayBtns="displayBtn" DeleteMovie="DeleteMovie"/>
+    }
+
+    @*@for (int i = 0; i < Movies.Count; i++)
+    {
+        <div style="background-color : @(i % 2 == 0 ? "blue" : "red")">
+            <p>(@(i + 1))Tittle: @((MarkupString)Movies[i].Title)</p>
+            <p>Release Date : <b>@Movies[i].ReleaseDate.ToString("dd MMM yyyy")</b></p>
+        </div>
+    }*@
+}
+@code {
+
+    [Parameter] public List<Movie> Movies{ get; set; }
+    bool displayBtn = false;
+
+    private void DeleteMovie(Movie movie)
+    {
+        Movies.Remove(movie);
+    }
+
+}
